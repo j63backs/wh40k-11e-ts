@@ -4,9 +4,9 @@
       {
         "name": "Github",
         "hidden": false,
-        "id": "8db3-575d-91b-47f8",
-        "shortName": "BSData/wh40k-11e",
-        "publisherUrl": "https://github.com/BSData/wh40k-11e"
+        "id": "d8ab-9d42-e7c6-4ca8",
+        "shortName": "j63backs/wh40k-11e-ts",
+        "publisherUrl": "https://github.com/j63backs/wh40k-11e-ts"
       }
     ],
     "costTypes": [
@@ -32960,7 +32960,7 @@
     ],
     "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
     "id": "sys-352e-adc2-7639-d610",
-    "name": "Warhammer 40,000 11th Edition",
+    "name": "Warhammer 40,000 11th Edition - JB",
     "revision": 6,
     "battleScribeVersion": 2.03,
     "type": "gameSystem",
