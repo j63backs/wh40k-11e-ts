@@ -7156,12 +7156,7 @@
                   {
                     "name": "Detachment Points",
                     "typeId": "82ae-1066-5107-6ae0",
-                    "value": 3
-                  },
-                  {
-                    "name": "Enhancements",
-                    "typeId": "f759-1bc4-cb3a-f0d2",
-                    "value": 0
+                    "value": 2
                   }
                 ],
                 "constraints": [
@@ -7546,7 +7541,7 @@
                   {
                     "name": "Priority Assets",
                     "hidden": false,
-                    "id": "d24e-ab64-bb67-4f52",
+                    "id": "56c7-738a-eaa6-d1b1",
                     "targetId": "0936-9767-1cc7-52ae",
                     "primary": false
                   }
@@ -7616,10 +7611,10 @@
                 ],
                 "categoryLinks": [
                   {
-                    "name": "Take and Hold",
+                    "name": "Purge the Foe",
                     "hidden": false,
-                    "id": "f033-914e-dd35-4b1c",
-                    "targetId": "1cc1-f11a-4e8f-1bcc",
+                    "id": "ba12-55b3-f93a-903b",
+                    "targetId": "6fe0-3dbe-f7e0-10bb",
                     "primary": false
                   }
                 ]
@@ -7690,7 +7685,7 @@
                   {
                     "name": "Disruption",
                     "hidden": false,
-                    "id": "735b-55b7-20af-bb74",
+                    "id": "e608-4bd2-fad9-930b",
                     "targetId": "ecf8-cf72-7d5b-1b5b",
                     "primary": false
                   }
@@ -27038,7 +27033,7 @@
                         "value": 1,
                         "field": "selections",
                         "scope": "self",
-                        "childId": "3789-4546-1d0a-f02b",
+                        "childId": "af1e-9a3d-785c-47f8",
                         "shared": true,
                         "childName": "Sorcerer"
                       }
@@ -37499,7 +37494,7 @@
                         "value": 1,
                         "field": "selections",
                         "scope": "self",
-                        "childId": "63b3-ccfa-5ef5-3a1a",
+                        "childId": "fe4b-b3a4-69b7-3088",
                         "shared": true,
                         "childName": "Sekhetar Robots"
                       }
@@ -39151,9 +39146,9 @@
           {
             "characteristics": [
               {
-                "$text": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP"
               }
             ],
             "name": "One Head Looks Back (Aura)",
@@ -39284,7 +39279,7 @@
                   {
                     "name": "A",
                     "typeId": "3bb-c35f-f54-fb08",
-                    "$text": "D6+6"
+                    "$text": "D3+6"
                   },
                   {
                     "name": "BS",
@@ -45031,7 +45026,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n▫ That use is ‑1 CP.\n▫ That use does not prevent any uses of that stratagem on other units this phase."
+                "$text": "You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do: \n- That use is ‑1 CP. \n- That use does not prevent any uses of that stratagem on other units this phase.'"
               }
             ],
             "name": "Destroyer of Futures (Once per phase, per unit)",
@@ -48686,9 +48681,9 @@
               {
                 "characteristics": [
                   {
-                    "$text": "The bearer has the Scouts 6\" ability. During the Declare Battle Formations step, the bearer can be attached to a ^^**Tzaangors^^** unit.",
                     "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
+                    "typeId": "9b8f-694b-e5e-b573",
+                    "$text": "The bearer has the Scouts 6\" ability."
                   }
                 ],
                 "name": "Bray Lord",
@@ -50213,7 +50208,7 @@
                   {
                     "name": "Description",
                     "typeId": "9b8f-694b-e5e-b573",
-                    "$text": "The first time this model is **destroyed**, at the end of the phase, roll one D6: ▪ On a 2+, set this model back up on the battlefield as close as possible to where it was **destroyed**, **unengaged**, with 3 wounds remaining.\n\n\n^^**INFANTRY/MOUNTED THOUSAND SONS PSYKER**^^ model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:\n- On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1.\nThis model has 3 wounds remaining."
+                    "$text": "(Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: \n- On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining. "
                   }
                 ]
               }
@@ -61077,7 +61072,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "1069-10ff-3ba9-873b",
     "name": "Chaos - Thousand Sons",
-    "revision": 6,
+    "revision": 7,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
