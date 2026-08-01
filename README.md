@@ -15,6 +15,7 @@ Maintained by community, in no way endorsed by any company/publisher.
 ## Links ##
 
 * [BSData organization homepage][BSData.net]
+* [Original Repository][Main_repository]
 
 [BSData.net]: https://www.bsdata.net/
-[BSData repository]: https://github.com/BSData/wh40k-11e
+[Main_repository]: https://github.com/BSData/wh40k-11e/
