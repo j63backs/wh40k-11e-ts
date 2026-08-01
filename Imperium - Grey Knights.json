@@ -5122,7 +5122,7 @@
                         "value": 1,
                         "field": "bef7-942a-1a23-59f8",
                         "affects": "self.entries.profiles.Unit",
-                        "scope": "parent"
+                        "scope": "root-entry"
                       }
                     ],
                     "type": "upgrade",
@@ -18688,7 +18688,16 @@
                     "name": "Ancient's Banner",
                     "hidden": false,
                     "id": "9812-9e40-480b-5b78",
-                    "collective": true
+                    "collective": true,
+                    "modifiers": [
+                      {
+                        "type": "increment",
+                        "value": 1,
+                        "field": "bef7-942a-1a23-59f8",
+                        "affects": "self.entries.profiles.Unit",
+                        "scope": "root-entry"
+                      }
+                    ]
                   }
                 ],
                 "selectionEntryGroups": [
@@ -29024,39 +29033,39 @@
           {
             "characteristics": [
               {
-                "$text": "24\"",
                 "name": "Range",
-                "typeId": "9896-9419-16a1-92fc"
+                "typeId": "9896-9419-16a1-92fc",
+                "$text": "24\""
               },
               {
-                "$text": "6",
                 "name": "A",
-                "typeId": "3bb-c35f-f54-fb08"
+                "typeId": "3bb-c35f-f54-fb08",
+                "$text": "6"
               },
               {
-                "$text": "3+",
                 "name": "BS",
-                "typeId": "94d-8a98-cf90-183e"
+                "typeId": "94d-8a98-cf90-183e",
+                "$text": "3+"
               },
               {
-                "$text": "10",
                 "name": "S",
-                "typeId": "2229-f494-25db-c5d3"
+                "typeId": "2229-f494-25db-c5d3",
+                "$text": "10"
               },
               {
-                "$text": "-1",
                 "name": "AP",
-                "typeId": "9ead-8a10-520-de15"
+                "typeId": "9ead-8a10-520-de15",
+                "$text": "-1"
               },
               {
-                "$text": "2",
                 "name": "D",
-                "typeId": "a354-c1c8-a745-f9e3"
+                "typeId": "a354-c1c8-a745-f9e3",
+                "$text": "3"
               },
               {
-                "$text": "Psychic",
                 "name": "Keywords",
-                "typeId": "7f1b-8591-2fcf-d01c"
+                "typeId": "7f1b-8591-2fcf-d01c",
+                "$text": "Psychic"
               }
             ],
             "name": "Heavy psycannon",
@@ -36871,6 +36880,13 @@
                 "id": "edcf-fa85-92be-384f",
                 "targetId": "1cc1-f11a-4e8f-1bcc",
                 "primary": false
+              },
+              {
+                "name": "3DP Detachment",
+                "hidden": false,
+                "id": "5885-2501-4a2b-8196",
+                "targetId": "7d80-2de5-816e-9d2b",
+                "primary": false
               }
             ],
             "constraints": [
@@ -37721,7 +37737,61 @@
         "name": "Detachments",
         "hidden": false,
         "id": "f7f3-a061-3f69-1432",
-        "defaultSelectionEntryId": "none"
+        "defaultSelectionEntryId": "none",
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "9c8b-ecd2-0893-9b98",
+            "includeChildSelections": false
+          },
+          {
+            "type": "max",
+            "value": -1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "1cc5-f836-580e-e92d",
+            "includeChildSelections": false
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 1,
+            "field": "1cc5-f836-580e-e92d",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "1. Incursion (1000 Point limit)"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "7d80-2de5-816e-9d2b",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "3DP Detachment"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "entryLinks": [

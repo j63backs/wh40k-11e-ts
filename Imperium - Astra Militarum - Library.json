@@ -9703,7 +9703,8 @@
                     ],
                     "name": "9 Shock Troopers",
                     "id": "c948-42fa-f79c-cba6",
-                    "hidden": false
+                    "hidden": false,
+                    "defaultSelectionEntryId": "50-15f0-5042-a0b3"
                   }
                 ],
                 "type": "upgrade",
@@ -9833,7 +9834,8 @@
                     ],
                     "name": "18 Shock Troopers",
                     "id": "8a51-d199-31e8-322e",
-                    "hidden": false
+                    "hidden": false,
+                    "defaultSelectionEntryId": "9d7c-d246-a161-a068"
                   }
                 ],
                 "modifiers": [
@@ -10234,7 +10236,7 @@
                 ],
                 "type": "set",
                 "value": 3,
-                "field": "acd1-da30-2656-832a"
+                "field": "dde5-d6bf-bb4a-9092"
               },
               {
                 "conditionGroups": [
@@ -13858,7 +13860,8 @@
                         "import": true,
                         "name": "Death Korps Trooper",
                         "hidden": false,
-                        "id": "14e5-2f8d-e806-fd7d"
+                        "id": "14e5-2f8d-e806-fd7d",
+                        "defaultAmount": ""
                       },
                       {
                         "infoLinks": [
@@ -14514,7 +14517,8 @@
                     "id": "4c39-2d84-6e06-46d4",
                     "hidden": false,
                     "collapsible": true,
-                    "sortIndex": 2
+                    "sortIndex": 2,
+                    "defaultSelectionEntryId": "14e5-2f8d-e806-fd7d"
                   },
                   {
                     "selectionEntries": [
@@ -14925,7 +14929,8 @@
                         "import": true,
                         "name": "Death Korps Trooper",
                         "hidden": false,
-                        "id": "0201-6e78-d053-b52d"
+                        "id": "0201-6e78-d053-b52d",
+                        "defaultAmount": ""
                       },
                       {
                         "infoLinks": [
@@ -15581,7 +15586,8 @@
                     "id": "663b-198c-c001-7be9",
                     "hidden": false,
                     "collapsible": true,
-                    "sortIndex": 2
+                    "sortIndex": 2,
+                    "defaultSelectionEntryId": "0201-6e78-d053-b52d"
                   },
                   {
                     "selectionEntries": [
@@ -23708,16 +23714,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "acd1-da30-2656-832a",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -23741,6 +23737,15 @@
             "shared": true,
             "id": "b1aa-ebc3-8bf0-51cf",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "98bb-27e2-c19e-e151",
+            "includeChildSelections": true
           }
         ],
         "modifiers": [
@@ -23758,6 +23763,23 @@
             "type": "set-primary",
             "value": "8247-35f6-ec2a-7caa",
             "field": "category"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "98bb-27e2-c19e-e151",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -50689,21 +50711,6 @@
         ],
         "modifiers": [
           {
-            "conditions": [
-              {
-                "type": "notInstanceOf",
-                "value": 1,
-                "field": "selections",
-                "scope": "primary-catalogue",
-                "childId": "b0ae-12a5-c84-ea45",
-                "shared": true
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
             "type": "increment",
             "value": 10,
             "field": "51b2-306e-1021-d207",
@@ -50757,6 +50764,21 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "set-primary",
+            "value": "8247-35f6-ec2a-7caa",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "3bdf-a114-5035-c6ac",
+                "shared": true
               }
             ]
           }
@@ -74042,6 +74064,21 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "set-primary",
+            "value": "8247-35f6-ec2a-7caa",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "3bdf-a114-5035-c6ac",
+                "shared": true
+              }
+            ]
           }
         ],
         "modifierGroups": [
@@ -79054,6 +79091,21 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "set-primary",
+            "value": "8247-35f6-ec2a-7caa",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "3bdf-a114-5035-c6ac",
+                "shared": true
+              }
+            ]
           }
         ],
         "modifierGroups": [
@@ -79602,6 +79654,21 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "set-primary",
+            "value": "8247-35f6-ec2a-7caa",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "3bdf-a114-5035-c6ac",
+                "shared": true
               }
             ]
           }
@@ -91403,6 +91470,21 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "set-primary",
+            "value": "8247-35f6-ec2a-7caa",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "3bdf-a114-5035-c6ac",
+                "shared": true
               }
             ]
           }
@@ -108616,6 +108698,13 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
+          },
+          {
+            "name": "Devastating Wounds",
+            "id": "e9b7-476f-01b8-e7a3",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "be1e-ac8e-1e2c-3528"
           }
         ],
         "profiles": [
@@ -108704,38 +108793,20 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "5d79-6cc2-af70-369b"
-          }
-        ],
-        "infoGroups": [
+          },
           {
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "Each time this model's unit makes a Charge move, until the end of the turn, melee weapons equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Leading the Charge",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "50a6-7304-dbf3-857f"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Devastating Wounds",
-                "id": "e9b7-476f-01b8-e7a3",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "be1e-ac8e-1e2c-3528"
-              }
-            ],
             "name": "Leading the Charge",
-            "id": "00c3-7441-e50e-d984",
-            "hidden": false
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "50a6-7304-dbf3-857f",
+            "characteristics": [
+              {
+                "$text": "Each time this model's unit makes a Charge move, until the end of the turn, melee weapons equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -121535,6 +121606,21 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set-primary",
+            "value": "8247-35f6-ec2a-7caa",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "3bdf-a114-5035-c6ac",
+                "shared": true
+              }
+            ]
           }
         ],
         "type": "model",
@@ -122552,6 +122638,21 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set-primary",
+            "value": "8247-35f6-ec2a-7caa",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "3bdf-a114-5035-c6ac",
+                "shared": true
+              }
+            ]
           }
         ],
         "type": "model",
@@ -123181,6 +123282,21 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set-primary",
+            "value": "8247-35f6-ec2a-7caa",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "3bdf-a114-5035-c6ac",
+                "shared": true
+              }
+            ]
           }
         ],
         "type": "model",
@@ -126479,7 +126595,7 @@
             "name": "Vehicle"
           },
           {
-            "name": "Centaur RSv",
+            "name": "Centaur RSV",
             "hidden": false,
             "id": "6999-e231-ced7-98f8",
             "targetId": "182e-9752-56ae-cd7d",
@@ -131717,6 +131833,38 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set",
+            "value": 1,
+            "field": "13ca-6877-83d6-c7ba",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "1. Incursion (1000 Point limit)"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "7d80-2de5-816e-9d2b",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "3DP Detachment"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "selectionEntries": [
@@ -133109,6 +133257,15 @@
             "scope": "parent",
             "shared": true,
             "id": "ec95-d2b6-cee9-b571",
+            "includeChildSelections": false
+          },
+          {
+            "type": "max",
+            "value": -1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "13ca-6877-83d6-c7ba",
             "includeChildSelections": false
           }
         ]

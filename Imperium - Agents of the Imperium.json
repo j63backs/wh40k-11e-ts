@@ -435,7 +435,7 @@
               {
                 "name": "pts",
                 "typeId": "51b2-306e-1021-d207",
-                "value": 45
+                "value": 20
               },
               {
                 "name": "Crusade Points",
@@ -455,6 +455,21 @@
               {
                 "name": "Crusade: Weapon Modifications",
                 "typeId": "716d-91b7-d55a-1022",
+                "value": 0
+              },
+              {
+                "name": "Blackstone Fragments",
+                "typeId": "ac6b-ced3-9b5e-9a6e",
+                "value": 0
+              },
+              {
+                "name": "Detachment Points",
+                "typeId": "82ae-1066-5107-6ae0",
+                "value": 0
+              },
+              {
+                "name": "Enhancements",
+                "typeId": "f759-1bc4-cb3a-f0d2",
                 "value": 0
               }
             ],
@@ -1110,7 +1125,7 @@
               {
                 "name": "pts",
                 "typeId": "51b2-306e-1021-d207",
-                "value": 40
+                "value": 10
               },
               {
                 "name": "Crusade Points",
@@ -1130,6 +1145,21 @@
               {
                 "name": "Crusade: Weapon Modifications",
                 "typeId": "716d-91b7-d55a-1022",
+                "value": 0
+              },
+              {
+                "name": "Blackstone Fragments",
+                "typeId": "ac6b-ced3-9b5e-9a6e",
+                "value": 0
+              },
+              {
+                "name": "Detachment Points",
+                "typeId": "82ae-1066-5107-6ae0",
+                "value": 0
+              },
+              {
+                "name": "Enhancements",
+                "typeId": "f759-1bc4-cb3a-f0d2",
                 "value": 0
               }
             ],
@@ -1587,7 +1617,7 @@
               {
                 "name": "pts",
                 "typeId": "51b2-306e-1021-d207",
-                "value": 35
+                "value": 15
               },
               {
                 "name": "Crusade Points",
@@ -1607,6 +1637,21 @@
               {
                 "name": "Crusade: Weapon Modifications",
                 "typeId": "716d-91b7-d55a-1022",
+                "value": 0
+              },
+              {
+                "name": "Blackstone Fragments",
+                "typeId": "ac6b-ced3-9b5e-9a6e",
+                "value": 0
+              },
+              {
+                "name": "Detachment Points",
+                "typeId": "82ae-1066-5107-6ae0",
+                "value": 0
+              },
+              {
+                "name": "Enhancements",
+                "typeId": "f759-1bc4-cb3a-f0d2",
                 "value": 0
               }
             ],
@@ -2025,7 +2070,7 @@
               {
                 "name": "pts",
                 "typeId": "51b2-306e-1021-d207",
-                "value": 40
+                "value": 15
               },
               {
                 "name": "Crusade Points",
@@ -2045,6 +2090,21 @@
               {
                 "name": "Crusade: Weapon Modifications",
                 "typeId": "716d-91b7-d55a-1022",
+                "value": 0
+              },
+              {
+                "name": "Blackstone Fragments",
+                "typeId": "ac6b-ced3-9b5e-9a6e",
+                "value": 0
+              },
+              {
+                "name": "Detachment Points",
+                "typeId": "82ae-1066-5107-6ae0",
+                "value": 0
+              },
+              {
+                "name": "Enhancements",
+                "typeId": "f759-1bc4-cb3a-f0d2",
                 "value": 0
               }
             ],
@@ -19033,21 +19093,21 @@
           {
             "constraints": [
               {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "9d64-9c4f-5486-ef76",
-                "includeChildSelections": false
-              },
-              {
                 "type": "min",
                 "value": 1,
                 "field": "selections",
                 "scope": "parent",
                 "shared": true,
                 "id": "6bb7-7e2e-1173-c71f",
+                "includeChildSelections": false
+              },
+              {
+                "type": "max",
+                "value": -1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "d424-5271-766b-c98e",
                 "includeChildSelections": false
               }
             ],
@@ -19364,7 +19424,7 @@
                   {
                     "name": "Detachment Points",
                     "typeId": "82ae-1066-5107-6ae0",
-                    "value": 2
+                    "value": 1
                   },
                   {
                     "name": "Enhancements",
@@ -19386,7 +19446,41 @@
             "name": "Detachment",
             "id": "bd35-3b86-9066-a78e",
             "hidden": false,
-            "defaultSelectionEntryId": "none"
+            "defaultSelectionEntryId": "none",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": 1,
+                "field": "d424-5271-766b-c98e",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "7d80-2de5-816e-9d2b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "3DP Detachment"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -22382,8 +22476,8 @@
             ]
           },
           {
-            "type": "increment",
-            "value": 10,
+            "type": "set",
+            "value": 60,
             "field": "51b2-306e-1021-d207",
             "conditions": [
               {
@@ -78564,7 +78658,7 @@
     "name": "Imperium - Agents of the Imperium",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 4,
+    "revision": 7,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }
