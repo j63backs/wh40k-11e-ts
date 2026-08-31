@@ -28294,6 +28294,33 @@
                     "shared": true,
                     "childName": "Scarab Occult Terminators"
                   }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "c6d1-e73b-9d26-5d8b",
+                        "childId": "c357-dd19-13a4-38cd",
+                        "shared": true,
+                        "childName": "Bray Lord",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5438-1567-83a-d29c",
+                        "shared": true,
+                        "childName": "Tzaangors"
+                      }
+                    ]
+                  }
                 ]
               }
             ],
@@ -60299,7 +60326,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "1069-10ff-3ba9-873b",
     "name": "Chaos - Thousand Sons",
-    "revision": 10,
+    "revision": 11,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
