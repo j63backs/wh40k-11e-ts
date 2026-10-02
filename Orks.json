@@ -8,7 +8,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 4,
+    "revision": 6,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [{"name": "Unaligned Forces", "id": "9a77-c467-98e7-6ddf", "importRootEntries": true, "targetId": "581a-46b9-5b86-44b7", "type": "catalogue"}],
@@ -7487,17 +7487,7 @@
             "max": 1,
             "min": 0,
             "scope": "force",
-            "conditionGroups": [
-              {
-                "type": "or",
-                "conditions": [
-                  {"childId": "a851-5f73-be1a-8791", "childName": "Nobz on Warbikes", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
-                  {"childId": "2e47-8a2f-a6d0-7b5e", "childName": "Skorchas", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
-                  {"childId": "9610-d887-1e01-a8e9", "childName": "Warbikers", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
-                  {"childId": "fa65-47a3-7218-dc0b", "childName": "Warbuggies", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
-                ]
-              }
-            ]
+            "conditions": [{"childId": "9610-d887-1e01-a8e9", "childName": "Warbikers", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
           }
         ],
         "categoryLinks": [
@@ -9917,7 +9907,7 @@
             "type": "set",
             "value": 80,
             "conditions": [
-              {"childId": "model", "field": "selections", "includeChildSelections": true, "scope": "de8f-24f9-c543-92b7", "shared": true, "type": "greaterThan", "value": 11}
+              {"childId": "model", "field": "selections", "includeChildSelections": true, "scope": "de8f-24f9-c543-92b7", "shared": true, "type": "greaterThan", "value": 10}
             ]
           },
           {

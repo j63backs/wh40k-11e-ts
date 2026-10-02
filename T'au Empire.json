@@ -8,7 +8,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 4,
+    "revision": 5,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [{"name": "Unaligned Forces", "id": "31ce-9bc2-d362-37c4", "importRootEntries": true, "targetId": "581a-46b9-5b86-44b7", "type": "catalogue"}],
@@ -38878,7 +38878,8 @@
             "type": "upgrade",
             "categoryLinks": [
               {"name": "Priority Assets", "id": "fe4c-46c4-d3a8-5028", "hidden": false, "primary": false, "targetId": "0936-9767-1cc7-52ae"},
-              {"name": "3DP Detachment", "id": "926b-99bd-2b5e-f13c", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"}
+              {"name": "3DP Detachment", "id": "926b-99bd-2b5e-f13c", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"},
+              {"name": "Take and Hold", "id": "18e2-343d-d988-14e3", "hidden": false, "primary": false, "targetId": "1cc1-f11a-4e8f-1bcc"}
             ],
             "constraints": [{"id": "d63e-8345-e33a-009f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "costs": [
