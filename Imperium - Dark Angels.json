@@ -7,7 +7,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 7,
+    "revision": 8,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -512,7 +512,8 @@
                     "sortIndex": 1,
                     "type": "instanceOf",
                     "value": 1
-                  }
+                  },
+                  {"childId": "6179-3533-ba6-9593", "childName": "Terminator Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
                 ]
               }
             ]
@@ -1932,7 +1933,7 @@
                 "typeName": "Melee Weapons",
                 "characteristics": [
                   {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
-                  {"name": "A", "$text": "16", "typeId": "2337-daa1-6682-b110"},
+                  {"name": "A", "$text": "12", "typeId": "2337-daa1-6682-b110"},
                   {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
                   {"name": "S", "$text": "6", "typeId": "ab33-d393-96ce-ccba"},
                   {"name": "AP", "$text": "-3", "typeId": "41a0-1301-112a-e2f2"},
@@ -2117,7 +2118,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6:\n\n\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+                "$text": "In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6:\n\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -2129,7 +2130,7 @@
             "page": 19,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [{"name": "Description", "$text": "This model has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.", "typeId": "9b8f-694b-e5e-b573"}]
+            "characteristics": [{"name": "Description", "$text": "This unit has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.", "typeId": "9b8f-694b-e5e-b573"}]
           },
           {
             "name": "Leader",
@@ -5685,18 +5686,12 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "Each time a model in this unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or to the Hit roll.\nIn addition, each time a model in this unit makes an attack that targets your Oath of Moment target (see Codex: Space Marines), add 1 to the Hit roll.",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
+            "characteristics": [{"name": "Description", "$text": "This unit's attacks can ignore modifiers to:\n- BS and WS.\n- **Hit rolls**.", "typeId": "9b8f-694b-e5e-b573"}]
           },
           {
             "name": "Teleport Homer",
             "id": "f474-41aa-a575-50e8",
-            "hidden": false,
+            "hidden": true,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
             "characteristics": [

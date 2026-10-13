@@ -767,7 +767,7 @@
         "typeId": "c547-1836-d8a-ff4f",
         "typeName": "Unit",
         "characteristics": [
-          {"name": "M", "$text": "7\"", "typeId": "e703-ecb6-5ce7-aec1"},
+          {"name": "M", "$text": "8\"", "typeId": "e703-ecb6-5ce7-aec1"},
           {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
           {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
           {"name": "W", "$text": "2", "typeId": "750a-a2ec-90d3-21fe"},
@@ -8127,7 +8127,7 @@
                     "id": "b6f2-98d2-c0a1-7012",
                     "hidden": false,
                     "import": true,
-                    "targetId": "2fb0-97d5-262d-b992",
+                    "targetId": "ac72-81fa-ea32-15fe",
                     "type": "selectionEntry",
                     "constraints": [
                       {"id": "34cf-9e34-f1cf-4148-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -20986,14 +20986,7 @@
         "infoLinks": [
           {"name": "Hunting Hounds", "id": "5d9f-638f-d74d-c9de", "hidden": false, "targetId": "90e0-d8ee-abf5-5cab", "type": "profile"},
           {"name": "Infiltrators", "id": "52f1-9099-2f85-b69e", "hidden": false, "targetId": "c05d-f4c3-f091-4938", "type": "rule"},
-          {
-            "name": "Scouts",
-            "id": "451a-cd9b-8c4c-4530",
-            "hidden": false,
-            "targetId": "ada6-bac1-ffe0-d6f7",
-            "type": "rule",
-            "modifiers": [{"field": "name", "type": "append", "value": "7\""}]
-          },
+          {"name": "Scouts 8\"", "id": "451a-cd9b-8c4c-4530", "hidden": false, "targetId": "a5f4-4af8-4735-7384", "type": "rule"},
           {"name": "Combat Doctrines", "id": "0ef6-e93a-6171-d209", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [

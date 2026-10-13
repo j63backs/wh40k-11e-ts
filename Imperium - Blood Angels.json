@@ -7,7 +7,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 5,
+    "revision": 6,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -5840,7 +5840,8 @@
           {"name": "Faction: Blood Angels", "id": "3800-e0c6-41c9-55b6", "primary": false, "targetId": "62ac-ef42-27b4-ae7"},
           {"name": "Sanguinary Guard", "id": "2dc9-9fcf-347d-8f15", "primary": false, "targetId": "d30a-a7c5-389a-e78"},
           {"name": "Jump Pack", "id": "f28d-9816-dbcc-1b5b", "primary": false, "targetId": "dda2-bb0a-215e-ad9c"},
-          {"name": "Explosives", "id": "1881-886c-7730-5973", "hidden": false, "primary": false, "targetId": "e33d-891d-33aa-e9bf"}
+          {"name": "Explosives", "id": "1881-886c-7730-5973", "hidden": false, "primary": false, "targetId": "e33d-891d-33aa-e9bf"},
+          {"name": "Tacticus", "id": "4fac-52b3-e80e-7d47", "hidden": false, "primary": false, "targetId": "5179-8ede-45e3-49a2"}
         ],
         "constraints": [
           {"id": "e001-678c-49ed-a79c", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 3},
@@ -11146,7 +11147,7 @@
             "typeId": "c547-1836-d8a-ff4f",
             "typeName": "Unit",
             "characteristics": [
-              {"name": "M", "$text": "8\"", "typeId": "e703-ecb6-5ce7-aec1"},
+              {"name": "M", "$text": "10\"", "typeId": "e703-ecb6-5ce7-aec1"},
               {"name": "T", "$text": "10", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "12", "typeId": "750a-a2ec-90d3-21fe"},
