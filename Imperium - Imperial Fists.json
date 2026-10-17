@@ -126,7 +126,8 @@
               {"name": "W", "$text": "7", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"},
+              {"name": "Base", "$text": "50mm", "typeId": "nr-base-size"}
             ]
           },
           {
@@ -347,7 +348,8 @@
               {"name": "W", "$text": "6", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"},
+              {"name": "Base", "$text": "40mm", "typeId": "nr-base-size"}
             ]
           },
           {
@@ -414,7 +416,7 @@
                 "typeName": "Ranged Weapons",
                 "characteristics": [
                   {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
-                  {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+                  {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
                   {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
                   {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
                   {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
@@ -627,7 +629,8 @@
               {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"},
+              {"name": "Base", "$text": "32mm", "typeId": "nr-base-size"}
             ]
           },
           {
