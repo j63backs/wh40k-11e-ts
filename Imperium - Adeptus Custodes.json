@@ -6,7 +6,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 19,
+    "revision": 24,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -385,7 +385,7 @@
         "type": "selectionEntry"
       },
       {
-        "name": "Detachments",
+        "name": "Detachment",
         "id": "9d4f-c524-e432-f877",
         "hidden": false,
         "import": true,
@@ -568,7 +568,7 @@
             ]
           },
           {
-            "name": "Martial Ka'tahs",
+            "name": "Rendax",
             "id": "4873-0eff-94d4-509f",
             "hidden": false,
             "typeId": "1035-7e68-261a-1e2d",
@@ -1742,6 +1742,7 @@
                 "import": true,
                 "type": "upgrade",
                 "categoryLinks": [{"name": "Damage Dx Weapon", "id": "b35f-6bf2-adbc-b5d5", "hidden": false, "primary": false, "targetId": "4986-bf86-beb4-13ac"}],
+                "constraints": [{"id": "6880-e366-75f8-73b0", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
                 "infoLinks": [{"name": "One Shot", "id": "5260-4bce-dccd-b762", "hidden": false, "targetId": "cd26-1611-860a-91e4", "type": "rule"}],
                 "profiles": [
@@ -1811,8 +1812,8 @@
                     "value": 1
                   },
                   {
-                    "childId": "48b1-935f-d394-5370",
-                    "childName": "Sagittarum Custodians",
+                    "childId": "ef86-875c-d111-78f6",
+                    "childName": "Sentinel Guard Sodality",
                     "field": "selections",
                     "queryFromSelf": false,
                     "scope": "self",
@@ -2044,7 +2045,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {"childId": "48b7-e713-d5b1-f11c", "childName": "Blade Champion", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
@@ -2540,12 +2541,12 @@
                 "typeId": "c547-1836-d8a-ff4f",
                 "typeName": "Unit",
                 "characteristics": [
-                  {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
-                  {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
+                  {"name": "M", "$text": "8\"", "typeId": "e703-ecb6-5ce7-aec1"},
+                  {"name": "T", "$text": "7", "typeId": "d29d-cf75-fc2d-34a4"},
                   {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
-                  {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
-                  {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
-                  {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
+                  {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
+                  {"name": "LD", "$text": "5+", "typeId": "58d2-b879-49c7-43bc"},
+                  {"name": "OC", "$text": "3", "typeId": "bef7-942a-1a23-59f8"},
                   {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"},
                   {"name": "Base", "$text": "40mm", "typeId": "nr-base-size"}
                 ]
@@ -2992,11 +2993,11 @@
                 "typeId": "c547-1836-d8a-ff4f",
                 "typeName": "Unit",
                 "characteristics": [
-                  {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
-                  {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
+                  {"name": "M", "$text": "8\"", "typeId": "e703-ecb6-5ce7-aec1"},
+                  {"name": "T", "$text": "7", "typeId": "d29d-cf75-fc2d-34a4"},
                   {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
-                  {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
-                  {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+                  {"name": "W", "$text": "6", "typeId": "750a-a2ec-90d3-21fe"},
+                  {"name": "LD", "$text": "5+", "typeId": "58d2-b879-49c7-43bc"},
                   {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
                   {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"},
                   {"name": "Base", "$text": "40mm", "typeId": "nr-base-size"}
@@ -3030,15 +3031,15 @@
         "type": "model",
         "associations": [
           {
-            "name": "Leading",
+            "name": "Supporting",
             "id": "bd66-13e6-7e0c-af5a",
             "action": "group",
             "childId": "unit",
             "childName": "unit",
             "includeChildSelections": true,
-            "label": "Leader",
+            "label": "Supported By",
             "max": 1,
-            "min": 0,
+            "min": 1,
             "scope": "force",
             "sortIndex": 4,
             "conditionGroups": [
@@ -3163,7 +3164,7 @@
         ],
         "infoLinks": [
           {"name": "Creeping Dread (Aura)", "id": "d307-1efa-e885-3b5c", "hidden": false, "targetId": "6e51-21f7-1753-cc65", "type": "profile"},
-          {"name": "Leader", "id": "cbe3-0a7b-ffd7-5d29", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
+          {"name": "Support", "id": "cbe3-0a7b-ffd7-5d29", "hidden": false, "targetId": "3342-2180-9c5d-925f", "type": "rule"},
           {
             "name": "Scouts",
             "id": "c8bf-b7d3-bccd-9349",
@@ -3332,7 +3333,7 @@
             ]
           },
           {
-            "name": "Leader",
+            "name": "Support",
             "id": "101b-4770-32be-d3a2",
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
@@ -3997,7 +3998,8 @@
                       {"name": "W", "$text": "1", "typeId": "750a-a2ec-90d3-21fe"},
                       {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
                       {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
-                      {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+                      {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"},
+                      {"name": "Base", "$text": "32mm", "typeId": "nr-base-size"}
                     ]
                   }
                 ],
@@ -4033,6 +4035,25 @@
                           {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
                           {"name": "Keywords", "$text": "Anti-PSYKER 4+, Assault, Rapid Fire 1", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      }
+                    ],
+                    "selectionEntryGroups": [
+                      {
+                        "name": "Weapon Upgrades",
+                        "id": "3d0c-edb4-6784-b478",
+                        "flatten": true,
+                        "hidden": false,
+                        "entryLinks": [
+                          {"name": "Weapon Modifications", "id": "2bfd-7778-d7a2-db83", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"},
+                          {
+                            "name": "Crusade Relic Upgrades",
+                            "id": "a47b-a1c1-fc41-bf75",
+                            "hidden": false,
+                            "import": true,
+                            "targetId": "b678-4a99-210e-931f",
+                            "type": "selectionEntryGroup"
+                          }
                         ]
                       }
                     ]
@@ -5649,7 +5670,8 @@
           {"name": "Martial Ka'tah", "id": "285f-d874-f6fb-6d64", "hidden": false, "targetId": "e348-7090-3aff-ee2c", "type": "rule"},
           {"name": "Leader", "id": "ece6-0f54-b70a-2272", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Deep Strike", "id": "7c0a-3b80-2782-c172", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Feel No Pain 5+*", "id": "60f7-f7b1-bc48-4666", "hidden": false, "targetId": "faec-8b1b-5a21-0087", "type": "rule"}
+          {"name": "Feel No Pain 5+*", "id": "60f7-f7b1-bc48-4666", "hidden": false, "targetId": "faec-8b1b-5a21-0087", "type": "rule"},
+          {"name": "Feel No Pain 5+", "id": "3355-d222-7973-a6d7", "hidden": false, "targetId": "5e10-6d62-2624-80a8", "type": "rule"}
         ],
         "profiles": [
           {
@@ -5678,7 +5700,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS",
+                "$text": "This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -5706,9 +5728,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "id": "6ce7-db1f-e8d-7489",
-                "$text": "Once per battle, at the start of the Fight phase, you can select one of the following to take effect until the end of the phase:\n■ This model's Watcher's Axe melee weapon has an Attacks characteristic of 12.\n■ This model has a 2+ invulnerable save.",
-                "hidden": false,
+                "$text": "(Once per battle, per army)\nAt the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 A.\n- This model has 3+ InSv.",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -6649,7 +6669,6 @@
           }
         ],
         "infoLinks": [
-          {"name": "Martial Ka'tah", "id": "08dc-2f40-b618-1cd9", "hidden": false, "targetId": "e348-7090-3aff-ee2c", "type": "rule"},
           {
             "name": "Deadly Demise",
             "id": "b037-45da-d349-af6",
@@ -7195,6 +7214,15 @@
             "sortIndex": 1,
             "targetId": "dffe-91f2-f156-0566",
             "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Enhancements",
+            "id": "9a5d-891f-4f9c-3f5e",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "a43b-fe98-3d93-435d",
+            "type": "selectionEntryGroup"
           }
         ],
         "infoLinks": [
@@ -7444,7 +7472,7 @@
             "defaultSelectionEntryId": "6e14-a825-faf0-b220",
             "hidden": false,
             "import": true,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "constraints": [
               {
                 "id": "1a1e-b432-be95-44c4",
@@ -7968,7 +7996,8 @@
                       {"name": "W", "$text": "1", "typeId": "750a-a2ec-90d3-21fe"},
                       {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
                       {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-                      {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+                      {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"},
+                      {"name": "Base", "$text": "32mm", "typeId": "nr-base-size"}
                     ]
                   }
                 ],
@@ -8003,6 +8032,25 @@
                           {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
                           {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
                           {"name": "Keywords", "$text": "Anti-Psyker 5+, Devastating Wounds: PSYKER", "typeId": "893f-9000-ccf7-648e"}
+                        ]
+                      }
+                    ],
+                    "selectionEntryGroups": [
+                      {
+                        "name": "Weapon Upgrades",
+                        "id": "2a14-5009-3dbd-991e",
+                        "flatten": true,
+                        "hidden": false,
+                        "entryLinks": [
+                          {"name": "Weapon Modifications", "id": "3eb5-ba39-e370-ee6c", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"},
+                          {
+                            "name": "Crusade Relic Upgrades",
+                            "id": "6ba2-017e-23c9-0fe1",
+                            "hidden": false,
+                            "import": true,
+                            "targetId": "b678-4a99-210e-931f",
+                            "type": "selectionEntryGroup"
+                          }
                         ]
                       }
                     ]
@@ -8125,7 +8173,8 @@
               }
             ]
           },
-          {"name": "Feel No Pain 3+*", "id": "91a7-fe35-1757-728a", "hidden": false, "targetId": "8ef2-30ad-3fc1-f7e4", "type": "rule"}
+          {"name": "Feel No Pain 3+*", "id": "91a7-fe35-1757-728a", "hidden": false, "targetId": "8ef2-30ad-3fc1-f7e4", "type": "rule"},
+          {"name": "Daughters of the Abyss", "id": "a40a-a3ee-d39f-9bce", "hidden": false, "targetId": "20d7-959d-9ddd-0c14", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -8366,7 +8415,7 @@
                     "scope": "parent",
                     "shared": true,
                     "type": "min",
-                    "value": 3
+                    "value": 4
                   },
                   {
                     "id": "ed50-7395-653b-9212",
@@ -8377,7 +8426,7 @@
                     "scope": "parent",
                     "shared": true,
                     "type": "max",
-                    "value": 9
+                    "value": 10
                   }
                 ],
                 "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
@@ -8410,7 +8459,8 @@
                       {"name": "W", "$text": "1", "typeId": "750a-a2ec-90d3-21fe"},
                       {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
                       {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-                      {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+                      {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"},
+                      {"name": "Base", "$text": "32mm", "typeId": "nr-base-size"}
                     ]
                   }
                 ]
@@ -8707,7 +8757,7 @@
                   {"name": "M", "$text": "8\"", "typeId": "e703-ecb6-5ce7-aec1"},
                   {"name": "T", "$text": "7", "typeId": "d29d-cf75-fc2d-34a4"},
                   {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
-                  {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
+                  {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
                   {"name": "LD", "$text": "5+", "typeId": "58d2-b879-49c7-43bc"},
                   {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
                   {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"},
@@ -9199,7 +9249,6 @@
           {"name": "Imperium", "id": "4987-d939-7a02-add9", "hidden": false, "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
           {"name": "Gyrfalcon Jetbike Sodality", "id": "af4f-2271-31bd-8ee0", "hidden": false, "primary": false, "targetId": "20d4-956e-133e-153c"},
           {"name": "Faction: Adeptus Custodes", "id": "5bbc-7d9f-677c-e51e", "hidden": false, "primary": false, "targetId": "eea5-aeaf-bbf0-d5ee"},
-          {"name": "Frame", "id": "a657-7a3a-ba63-c0db", "hidden": false, "primary": false, "targetId": "b927-8eeb-7cc3-8dec"},
           {"name": "Emissaries", "id": "81f7-eb13-b70a-5627", "hidden": false, "primary": false, "targetId": "1070-413c-cf8f-338f"}
         ],
         "constraints": [
@@ -9261,6 +9310,15 @@
             "import": true,
             "sortIndex": 1,
             "targetId": "dffe-91f2-f156-0566",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Enhancements",
+            "id": "564b-47cb-fd41-adc9",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "a43b-fe98-3d93-435d",
             "type": "selectionEntryGroup"
           }
         ],
@@ -9458,6 +9516,7 @@
             "collective": false,
             "hidden": false,
             "import": true,
+            "sortIndex": 3,
             "type": "model",
             "constraints": [
               {"id": "6756-7a90-ed24-bfe9-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2},
@@ -9473,10 +9532,10 @@
                 "typeName": "Unit",
                 "characteristics": [
                   {"name": "M", "$text": "12\"", "typeId": "e703-ecb6-5ce7-aec1"},
-                  {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
+                  {"name": "T", "$text": "8", "typeId": "d29d-cf75-fc2d-34a4"},
                   {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
-                  {"name": "W", "$text": "4", "typeId": "750a-a2ec-90d3-21fe"},
-                  {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+                  {"name": "W", "$text": "9", "typeId": "750a-a2ec-90d3-21fe"},
+                  {"name": "LD", "$text": "5+", "typeId": "58d2-b879-49c7-43bc"},
                   {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
                   {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"},
                   {"name": "Base", "$text": "75x42mm Oval", "typeId": "nr-base-size"}
@@ -9742,6 +9801,15 @@
             "sortIndex": 1,
             "targetId": "dffe-91f2-f156-0566",
             "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Enhancements",
+            "id": "872f-fbfc-769b-e69d",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "a43b-fe98-3d93-435d",
+            "type": "selectionEntryGroup"
           }
         ],
         "infoLinks": [
@@ -9938,6 +10006,7 @@
             "collective": false,
             "hidden": false,
             "import": true,
+            "sortIndex": 3,
             "type": "model",
             "constraints": [
               {"id": "aa8e-a3d3-1977-b9c2-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 3},
@@ -11382,7 +11451,6 @@
           }
         ],
         "infoLinks": [
-          {"name": "Martial Ka'tah", "id": "afaf-6f6f-5626-dc1f", "hidden": false, "targetId": "e348-7090-3aff-ee2c", "type": "rule"},
           {
             "name": "Deadly Demise",
             "id": "f6fc-4db5-18b6-ef46",
@@ -12154,7 +12222,7 @@
                             "characteristics": [
                               {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
                               {"name": "A", "$text": "7", "typeId": "2337-daa1-6682-b110"},
-                              {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
+                              {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
                               {"name": "S", "$text": "14", "typeId": "ab33-d393-96ce-ccba"},
                               {"name": "AP", "$text": "-3", "typeId": "41a0-1301-112a-e2f2"},
                               {"name": "D", "$text": "4", "typeId": "3254-9fe6-d824-513e"},
@@ -12440,7 +12508,6 @@
           }
         ],
         "infoLinks": [
-          {"name": "Martial Ka'tah", "id": "074d-7652-084a-bcf7", "hidden": false, "targetId": "e348-7090-3aff-ee2c", "type": "rule"},
           {
             "name": "Deadly Demise",
             "id": "30bd-917b-b4cb-790c",
@@ -12763,7 +12830,11 @@
                 "import": true,
                 "sortIndex": 2,
                 "targetId": "2693-63bf-611f-37fe",
-                "type": "selectionEntry"
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "2085-927f-2db0-7f94-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "2085-927f-2db0-7f94-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
               }
             ],
             "selectionEntryGroups": [
@@ -12838,7 +12909,6 @@
           }
         ],
         "infoLinks": [
-          {"name": "Martial Ka'tah", "id": "1179-f287-0409-be6f", "hidden": false, "targetId": "e348-7090-3aff-ee2c", "type": "rule"},
           {
             "name": "Deadly Demise",
             "id": "feb9-98d5-9281-ee2a",
@@ -13295,7 +13365,6 @@
           }
         ],
         "infoLinks": [
-          {"name": "Martial Ka'tah", "id": "759d-dcb9-ffc4-b854", "hidden": false, "targetId": "e348-7090-3aff-ee2c", "type": "rule"},
           {
             "name": "Deadly Demise",
             "id": "8c31-5865-edc9-ea0a",
@@ -13666,7 +13735,7 @@
         "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}]
       },
       {
-        "name": "Detachments",
+        "name": "Detachment",
         "id": "5218-339c-eb34-9ac0",
         "hidden": false,
         "import": true,
@@ -13790,12 +13859,9 @@
                 "id": "a36b-bb22-1a15-2a48",
                 "hidden": false,
                 "import": true,
-                "sortIndex": 4,
+                "sortIndex": 3,
                 "type": "upgrade",
-                "categoryLinks": [
-                  {"name": "Priority Assets", "id": "a7ec-fd51-9de4-b30e", "hidden": false, "primary": false, "targetId": "0936-9767-1cc7-52ae"},
-                  {"name": "Purge the Foe", "id": "7fc2-e21d-60e6-73de", "hidden": false, "primary": false, "targetId": "6fe0-3dbe-f7e0-10bb"}
-                ],
+                "categoryLinks": [{"name": "Purge the Foe", "id": "7fc2-e21d-60e6-73de", "hidden": false, "primary": false, "targetId": "6fe0-3dbe-f7e0-10bb"}],
                 "constraints": [{"id": "44f5-aad2-e68d-744e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [
                   {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0},
@@ -13821,7 +13887,7 @@
                 "id": "3b75-a700-050c-06f5",
                 "hidden": false,
                 "import": true,
-                "sortIndex": 5,
+                "sortIndex": 6,
                 "type": "upgrade",
                 "categoryLinks": [{"name": "Disruption", "id": "f124-14a7-d0d4-feeb", "hidden": false, "primary": false, "targetId": "ecf8-cf72-7d5b-1b5b"}],
                 "constraints": [{"id": "94be-963b-f3b6-fc5d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
@@ -13849,7 +13915,7 @@
                 "id": "1bb5-5aba-6c8f-7afc",
                 "hidden": false,
                 "import": true,
-                "sortIndex": 6,
+                "sortIndex": 7,
                 "type": "upgrade",
                 "categoryLinks": [{"name": "Take and Hold", "id": "b9f1-63c0-b769-d61c", "hidden": false, "primary": false, "targetId": "1cc1-f11a-4e8f-1bcc"}],
                 "constraints": [{"id": "22f5-51fd-138c-38fb", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
@@ -13909,7 +13975,7 @@
                 "id": "dbe4-0a6f-4eb5-5f06",
                 "hidden": false,
                 "import": true,
-                "sortIndex": 3,
+                "sortIndex": 5,
                 "type": "upgrade",
                 "categoryLinks": [{"name": "Take and Hold", "id": "ce64-d691-7687-54c2", "hidden": false, "primary": false, "targetId": "1cc1-f11a-4e8f-1bcc"}],
                 "constraints": [{"id": "90f8-e522-b101-9552", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
@@ -13937,7 +14003,7 @@
                 "id": "ccb7-6823-6a97-7c19",
                 "hidden": false,
                 "import": true,
-                "sortIndex": 7,
+                "sortIndex": 4,
                 "type": "upgrade",
                 "categoryLinks": [{"name": "Reconnaissance", "id": "0bb9-81f3-641c-3f1a", "hidden": false, "primary": false, "targetId": "b4a7-5083-fe94-4d24"}],
                 "constraints": [{"id": "498f-8e73-b43d-d593", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
@@ -14243,72 +14309,6 @@
         ]
       },
       {
-        "name": "Lastrum storm bolter",
-        "id": "47e0-7c05-18ba-bb02",
-        "collective": true,
-        "hidden": false,
-        "import": true,
-        "type": "upgrade",
-        "constraints": [
-          {"id": "245e-2190-e1fc-fdc5", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-          {"id": "29a1-aa76-b3ce-4271", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-        ],
-        "infoLinks": [{"name": "Rapid Fire", "id": "58b7-50bf-9e17-78e5", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}],
-        "profiles": [
-          {
-            "name": "Lastrum storm bolter",
-            "id": "96ad-1cec-fb3b-a317",
-            "hidden": false,
-            "typeId": "f77d-b953-8fa4-b762",
-            "typeName": "Ranged Weapons",
-            "characteristics": [
-              {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
-              {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
-              {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
-              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Infernus firepike",
-        "id": "3d65-400b-7524-120f",
-        "collective": true,
-        "hidden": false,
-        "import": true,
-        "type": "upgrade",
-        "categoryLinks": [{"name": "Attacks Dx Weapon", "id": "f362-79e4-ac14-2450", "hidden": false, "primary": false, "targetId": "e993-e086-6de1-12af"}],
-        "constraints": [
-          {"id": "75a9-8935-d177-41e8", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-          {"id": "4b40-a7b5-aa63-4a5a", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-        ],
-        "infoLinks": [
-          {"name": "Ignores Cover", "id": "c8b6-ca7b-1bc2-af67", "hidden": false, "targetId": "4640-43e7-30b-215a", "type": "rule"},
-          {"name": "Torrent", "id": "c4a7-ab9b-5679-36b7", "hidden": false, "targetId": "5edf-d619-23e0-9b56", "type": "rule"}
-        ],
-        "profiles": [
-          {
-            "name": "Infernus firepike",
-            "id": "7f4-742a-3d7-18b5",
-            "hidden": false,
-            "typeId": "f77d-b953-8fa4-b762",
-            "typeName": "Ranged Weapons",
-            "characteristics": [
-              {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
-              {"name": "A", "$text": "D6", "typeId": "3bb-c35f-f54-fb08"},
-              {"name": "BS", "$text": "N/A", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "6", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
-              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Ignores Cover, Torrent", "typeId": "7f1b-8591-2fcf-d01c"}
-            ]
-          }
-        ]
-      },
-      {
         "name": "Twin adrathic destructor",
         "id": "6dae-e4c7-7a80-7c66",
         "collective": true,
@@ -14397,6 +14397,25 @@
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Anti-PSYKER 4+, Assault, Blast 1, Torrent", "typeId": "7f1b-8591-2fcf-d01c"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapon Upgrades",
+            "id": "a748-7c74-1637-4d51",
+            "flatten": true,
+            "hidden": false,
+            "entryLinks": [
+              {"name": "Weapon Modifications", "id": "3da7-bcf2-611e-bb6f", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"},
+              {
+                "name": "Crusade Relic Upgrades",
+                "id": "5fdb-fb8f-5c8d-74c3",
+                "hidden": false,
+                "import": true,
+                "targetId": "b678-4a99-210e-931f",
+                "type": "selectionEntryGroup"
+              }
             ]
           }
         ]
@@ -16244,7 +16263,7 @@
                   {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
                   {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
                   {"name": "LD", "$text": "5+", "typeId": "58d2-b879-49c7-43bc"},
-                  {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
+                  {"name": "OC", "$text": "3", "typeId": "bef7-942a-1a23-59f8"},
                   {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"},
                   {"name": "Base", "$text": "40mm", "typeId": "nr-base-size"}
                 ]
@@ -16391,7 +16410,7 @@
             "typeName": "Melee Weapons",
             "characteristics": [
               {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
-              {"name": "A", "$text": "4", "typeId": "2337-daa1-6682-b110"},
+              {"name": "A", "$text": "3", "typeId": "2337-daa1-6682-b110"},
               {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
               {"name": "S", "$text": "10", "typeId": "ab33-d393-96ce-ccba"},
               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
@@ -17118,12 +17137,18 @@
         ],
         "profiles": [
           {
-            "name": "Dread Foe",
+            "name": "Reap a Terrible Tally",
             "id": "6536-90dc-a12d-cbb2",
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [{"name": "Description", "$text": "This unit's melee attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 AP.", "typeId": "9b8f-694b-e5e-b573"}]
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This unit’s attacks that target an Infantry unit can:\n- Re‑roll hit rolls of 1.\n- Re‑roll wound rolls of 1.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "selectionEntries": [
@@ -17316,6 +17341,15 @@
             "import": true,
             "sortIndex": 1,
             "targetId": "dffe-91f2-f156-0566",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Enhancements",
+            "id": "66db-c774-badf-d09f",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 3,
+            "targetId": "a43b-fe98-3d93-435d",
             "type": "selectionEntryGroup"
           }
         ],
@@ -17531,6 +17565,7 @@
             "collective": false,
             "hidden": false,
             "import": true,
+            "sortIndex": 2,
             "type": "model",
             "constraints": [
               {"id": "fdab-bfef-ce5b-2435-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 3},
@@ -17826,7 +17861,6 @@
           }
         ],
         "infoLinks": [
-          {"name": "Martial Ka'tah", "id": "fda7-5ee0-8766-dda7", "hidden": false, "targetId": "e348-7090-3aff-ee2c", "type": "rule"},
           {
             "name": "Deadly Demise",
             "id": "ea70-d961-1726-8adb",
@@ -18140,7 +18174,7 @@
                     "type": "selectionEntryGroup"
                   }
                 ],
-                "infoLinks": [{"name": "Twin-linked", "id": "a46e-4e40-4f50-7a5a", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"}],
+                "infoLinks": [{"name": "Lethal Hits", "id": "a46e-4e40-4f50-7a5a", "hidden": false, "targetId": "d1d1-611e-5191-1095", "type": "rule"}],
                 "profiles": [
                   {
                     "name": "Arachnus Blaze Carronade",
@@ -18243,13 +18277,32 @@
             "typeId": "8a40-4aaa-c780-9046",
             "typeName": "Melee Weapons",
             "characteristics": [
-              {"name": "Range", "id": "95e-8d2a-d2b6-ce04", "$text": "Melee", "hidden": false, "typeId": "914c-b413-91e3-a132"},
-              {"name": "A", "id": "37bf-c707-6f20-b0a4", "$text": "3", "hidden": false, "typeId": "2337-daa1-6682-b110"},
-              {"name": "WS", "id": "7443-828a-6af8-be5b", "$text": "2+", "hidden": false, "typeId": "95d1-95f-45b4-11d6"},
-              {"name": "S", "id": "aa92-aa56-6de7-2b77", "$text": "3", "hidden": false, "typeId": "ab33-d393-96ce-ccba"},
-              {"name": "AP", "id": "f793-8a63-90ea-56b8", "$text": "0", "hidden": false, "typeId": "41a0-1301-112a-e2f2"},
-              {"name": "D", "id": "3717-2906-af77-faef", "$text": "1", "hidden": false, "typeId": "3254-9fe6-d824-513e"},
-              {"name": "Keywords", "id": "4379-e65b-8165-5114", "hidden": false, "typeId": "893f-9000-ccf7-648e"}
+              {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+              {"name": "A", "$text": "3", "typeId": "2337-daa1-6682-b110"},
+              {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
+              {"name": "S", "$text": "3", "typeId": "ab33-d393-96ce-ccba"},
+              {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
+              {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+              {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
+            ],
+            "modifiers": [
+              {
+                "field": "95d1-95f-45b4-11d6",
+                "type": "set",
+                "value": "2+",
+                "conditions": [
+                  {
+                    "childId": "bdc7-75fc-ca0b-cb27",
+                    "childName": "Knight-Centura",
+                    "field": "selections",
+                    "includeChildSelections": false,
+                    "scope": "ancestor",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
             ]
           }
         ],
@@ -18561,7 +18614,7 @@
                   {"name": "M", "$text": "8\"", "typeId": "e703-ecb6-5ce7-aec1"},
                   {"name": "T", "$text": "7", "typeId": "d29d-cf75-fc2d-34a4"},
                   {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
-                  {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
+                  {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
                   {"name": "LD", "$text": "5+", "typeId": "58d2-b879-49c7-43bc"},
                   {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
                   {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"},
@@ -19830,8 +19883,8 @@
                             "value": 1
                           },
                           {
-                            "childId": "cd6a-aae4-acca-d3ac",
-                            "childName": "Solar Watch",
+                            "childId": "dbe4-0a6f-4eb5-5f06",
+                            "childName": "Honoured Companions",
                             "field": "selections",
                             "includeChildSelections": true,
                             "scope": "force",

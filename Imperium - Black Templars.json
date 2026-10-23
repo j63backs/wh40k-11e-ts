@@ -975,7 +975,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "In your opponent's Shooting phase, each time an enemy unit has shot, if any models in this unit were destroyed as a result of those attacks, this unit can make a surge move of up to D6+2.",
+                "$text": "In your opponent's Shooting phase, each time an enemy unit has shot, if any models in this unit were destroyed as a result of those attacks, this unit can make a surge move of up to D6+1.",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -2092,6 +2092,23 @@
                                 ]
                               }
                             ]
+                          },
+                          {
+                            "field": "error",
+                            "type": "add",
+                            "value": "Max 2 {this} per 4 models",
+                            "conditions": [
+                              {
+                                "childId": "9dc6-6ad8-818e-db2e",
+                                "childName": "Hand flamer",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "206c-6b4d-4aaa-7e79",
+                                "shared": true,
+                                "type": "greaterThan",
+                                "value": 4
+                              }
+                            ]
                           }
                         ]
                       }
@@ -2164,7 +2181,7 @@
                               {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
                               {"name": "S", "$text": "8", "typeId": "ab33-d393-96ce-ccba"},
                               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
-                              {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+                              {"name": "D", "$text": "3", "typeId": "3254-9fe6-d824-513e"},
                               {"name": "Keywords", "$text": "Devastating Wounds", "typeId": "893f-9000-ccf7-648e"}
                             ]
                           }
@@ -3685,23 +3702,6 @@
                 ]
               }
             ]
-          },
-          {
-            "field": "warning",
-            "type": "add",
-            "value": "The points are not incorrect for this, the MFM says per Multi-melta. this tank comes with 2 by default. Each one costs 10 points. Do not report this as an error, it will not be fixed. Check the box to remove this error and confirm you have read this. ",
-            "conditions": [
-              {
-                "childId": "664e-e178-ab57-901c",
-                "childName": "Clear Warning",
-                "field": "selections",
-                "includeChildSelections": true,
-                "scope": "parent",
-                "shared": true,
-                "type": "lessThan",
-                "value": 1
-              }
-            ]
           }
         ],
         "profiles": [
@@ -3729,16 +3729,6 @@
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
             "characteristics": [{"name": "Description", "$text": "This unit’s ranged attacks that target a unit within 12\" of this unit have +1 S.", "typeId": "9b8f-694b-e5e-b573"}]
-          }
-        ],
-        "selectionEntries": [
-          {
-            "name": "Clear Warning",
-            "id": "664e-e178-ab57-901c",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "constraints": [{"id": "e2f6-559c-d143-2d91", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}]
           }
         ],
         "selectionEntryGroups": [
